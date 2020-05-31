@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { Card } from "react-bootstrap";
 
 class Employee extends React.Component {
   constructor(props) {
@@ -11,32 +13,37 @@ class Employee extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h1>Employee Details</h1>
-        <p>
-          <label>
-            Employee Id: <b>{this.props.id}</b>
-          </label>
-        </p>
-        <p>
-          <label>
-            Employee name: <b>{this.props.name}</b>
-          </label>
-        </p>
-        <p>
-          <label>
-            Employee email: <b>{this.props.email}</b>
-          </label>
-        </p>
-        <p>
-          <label>
-            Employee mobile number: <b>{this.props.mobileNumber}</b>
-          </label>
-        </p>
-        <EmployeeHigherEduDetails
-          higherEdu={this.props.higherEdu}
-          higherEduUniversity={this.props.higherEduUniversity}
-        ></EmployeeHigherEduDetails>
+      <div className="container">
+        <br />
+        <Card>
+          <Card.Header as="h5">Employee Details</Card.Header>
+          <Card.Body>
+            <p>
+              <label>
+                Employee Id: <b>{this.props.id}</b>
+              </label>
+            </p>
+            <p>
+              <label>
+                Employee name: <b>{this.props.name}</b>
+              </label>
+            </p>
+            <p>
+              <label>
+                Employee email: <b>{this.props.email}</b>
+              </label>
+            </p>
+            <p>
+              <label>
+                Employee mobile number: <b>{this.props.mobileNumber}</b>
+              </label>
+            </p>
+            <EmployeeHigherEduDetails
+              higherEdu={this.props.higherEdu}
+              higherEduUniversity={this.props.higherEduUniversity}
+            ></EmployeeHigherEduDetails>
+          </Card.Body>
+        </Card>
       </div>
     );
   }
