@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "employees": [
+    {
+      "name": "srinivas kandula",
+      "emailId": "cnuchowdary007@gmail.com",
+      "mobileNumber": "+918985310407",
+      "address": "Near piduguralla guntur district andhra pradesh 522413",
+      "id": 5
+    }
+  ]
+}
